@@ -1,11 +1,21 @@
-import logo from './logo.svg';
+import { useState, Fragment, useEffect } from "react";
 import './App.css';
+import { fetchingFunction } from "./modules/fetching-function";
 
 function App() {
+  const [skills, setSkills] = useState();
+  
+  useEffect(() => {
+    fetchingFunction("title", "python", 50)
+  }, [])
+
+  useEffect(() => {
+    fetchingFunction("skills", "metal", 50)
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -23,3 +33,6 @@ function App() {
 }
 
 export default App;
+
+//URL { href: "https://emsiservices.com/emsi-open-proxy-service/postings/us/title?q=python&limit=50"
+
