@@ -19,6 +19,6 @@ export async function fetchingFunction(searchType, searchText, searchLimit){
         }
     })
     let jsonData = await res.json();
-    console.log("real Emsi data!", jsonData);
+    console.log(`Emsi ${searchType} search for ${searchText}`, jsonData);
     return jsonData;
 }

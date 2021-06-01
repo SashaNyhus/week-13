@@ -1,589 +1,859 @@
-const exampleTitlesData = {
+export const exampleTitlesData = {
     "data": [
       {
-        "id": "ET4692B3852FB22CCA",
-        "name": "Python Developers",
+        "id": "ET077161B85B97C9B0",
+        "name": "Speech Language Pathologists",
         "properties": {
-          "singular_name": "Python Developer",
-          "unique_postings": 29847
+          "singular_name": "Speech Language Pathologist",
+          "unique_postings": 683989
         },
-        "score": 121.134094
+        "score": 113.00135
       },
       {
-        "id": "ET5C753CB62DB8B515",
-        "name": "Python Engineers",
+        "id": "ETAE845C58F9C9CFA5",
+        "name": "School Speech Language Pathologists",
         "properties": {
-          "singular_name": "Python Engineer",
-          "unique_postings": 11300
+          "singular_name": "School Speech Language Pathologist",
+          "unique_postings": 172105
         },
-        "score": 110.81608
+        "score": 97.3187
       },
       {
-        "id": "ET8579E10EE6F5311E",
-        "name": "Python Software Engineers",
+        "id": "ET8774199B2349615E",
+        "name": "Travel Speech Language Pathologists",
         "properties": {
-          "singular_name": "Python Software Engineer",
-          "unique_postings": 19705
+          "singular_name": "Travel Speech Language Pathologist",
+          "unique_postings": 62576
         },
-        "score": 110.60861
+        "score": 89.83388
       },
       {
-        "id": "ETD6BDB87F4047E2BC",
-        "name": "Lead Python Developers",
+        "id": "ETF2B6B5670795DDD6",
+        "name": "Sign Language Interpreters",
         "properties": {
-          "singular_name": "Lead Python Developer",
-          "unique_postings": 19009
+          "singular_name": "Sign Language Interpreter",
+          "unique_postings": 20754
         },
-        "score": 110.24662
+        "score": 85.827095
       },
       {
-        "id": "ET068085BE907F9127",
-        "name": "Python Data Engineers",
+        "id": "ETE1C53BC37AB553EF",
+        "name": "Therapists/Speech Language Pathologists",
         "properties": {
-          "singular_name": "Python Data Engineer",
-          "unique_postings": 5241
+          "singular_name": "Therapist/Speech Language Pathologist",
+          "unique_postings": 25898
         },
-        "score": 97.27725
+        "score": 83.30723
       },
       {
-        "id": "ET136F9DB18BA04114",
-        "name": "Python/Django Developers",
+        "id": "ET1C33AE3340D919D3",
+        "name": "Foreign Language Teachers",
         "properties": {
-          "singular_name": "Python/Django Developer",
-          "unique_postings": 3870
+          "singular_name": "Foreign Language Teacher",
+          "unique_postings": 13035
         },
-        "score": 94.224815
+        "score": 82.211174
       },
       {
-        "id": "ET8EE8908D5DE8A830",
-        "name": "Python Programmers",
+        "id": "ETAF801CF7ABEC462B",
+        "name": "Speech Language Pathologist Assistants",
         "properties": {
-          "singular_name": "Python Programmer",
-          "unique_postings": 2120
+          "singular_name": "Speech Language Pathologist Assistant",
+          "unique_postings": 19781
         },
-        "score": 93.04159
+        "score": 81.3139
       },
       {
-        "id": "ETF50207F9187CCF45",
-        "name": "Python Automation Engineers",
+        "id": "ET4CEA72B0681D15CE",
+        "name": "Teletherapy Speech Language Pathologists",
         "properties": {
-          "singular_name": "Python Automation Engineer",
-          "unique_postings": 2830
+          "singular_name": "Teletherapy Speech Language Pathologist",
+          "unique_postings": 19456
         },
-        "score": 91.074715
+        "score": 81.19135
       },
       {
-        "id": "ET30F07E246C1F60C6",
-        "name": "Python Software Developers",
+        "id": "ETCC6A0DB86C7E0C4A",
+        "name": "Pediatric Speech Language Pathologists",
         "properties": {
-          "singular_name": "Python Software Developer",
-          "unique_postings": 2430
+          "singular_name": "Pediatric Speech Language Pathologist",
+          "unique_postings": 16963
         },
-        "score": 89.541046
+        "score": 80.17695
       },
       {
-        "id": "ETBE41D4216294B34A",
-        "name": "Java/Python Developers",
+        "id": "ETD1E7A9983C913B20",
+        "name": "Bilingual Speech Language Pathologists",
         "properties": {
-          "singular_name": "Java/Python Developer",
-          "unique_postings": 2388
+          "singular_name": "Bilingual Speech Language Pathologist",
+          "unique_postings": 11573
         },
-        "score": 89.36558
+        "score": 77.34833
       },
       {
-        "id": "ETC0B17143130AD679",
-        "name": "Full Stack Python Developers",
+        "id": "ET9E69AF08B964ECF3",
+        "name": "English Language Teachers",
         "properties": {
-          "singular_name": "Full Stack Python Developer",
-          "unique_postings": 3577
+          "singular_name": "English Language Teacher",
+          "unique_postings": 5910
         },
-        "score": 88.90735
+        "score": 76.061844
       },
       {
-        "id": "ET32943F8C406FDF03",
-        "name": "Python Architects",
+        "id": "ET79AD2E698F6C4DFF",
+        "name": "Speech Language Therapists",
         "properties": {
-          "singular_name": "Python Architect",
-          "unique_postings": 1210
+          "singular_name": "Speech Language Therapist",
+          "unique_postings": 5433
         },
-        "score": 87.08649
+        "score": 75.40764
       },
       {
-        "id": "ET63F77273546129F0",
-        "name": "Python/Django Engineers",
+        "id": "ETD96730D8A4EA46C4",
+        "name": "Rehabilitation Speech Language Pathologists",
         "properties": {
-          "singular_name": "Python/Django Engineer",
-          "unique_postings": 1475
+          "singular_name": "Rehabilitation Speech Language Pathologist",
+          "unique_postings": 7795
         },
-        "score": 84.51707
+        "score": 74.42485
       },
       {
-        "id": "ET52A8540952905524",
-        "name": "Python Application Developers",
+        "id": "ET2FCDFA1190E9F642",
+        "name": "School Speech Language Pathologist Assistants",
         "properties": {
-          "singular_name": "Python Application Developer",
+          "singular_name": "School Speech Language Pathologist Assistant",
+          "unique_postings": 12339
+        },
+        "score": 74.311554
+      },
+      {
+        "id": "ETA963F93D9D2D26F8",
+        "name": "English Language Arts Teachers",
+        "properties": {
+          "singular_name": "English Language Arts Teacher",
+          "unique_postings": 7540
+        },
+        "score": 74.1788
+      },
+      {
+        "id": "ETD2E5A538631A65E9",
+        "name": "Home Health Speech Language Pathologists",
+        "properties": {
+          "singular_name": "Home Health Speech Language Pathologist",
+          "unique_postings": 11962
+        },
+        "score": 74.092354
+      },
+      {
+        "id": "ET98AA35E37A8C102A",
+        "name": "Language Arts Teachers",
+        "properties": {
+          "singular_name": "Language Arts Teacher",
+          "unique_postings": 4285
+        },
+        "score": 73.562386
+      },
+      {
+        "id": "ETBDEE44607B88EC57",
+        "name": "Language Instructors",
+        "properties": {
+          "singular_name": "Language Instructor",
+          "unique_postings": 2441
+        },
+        "score": 73.01441
+      },
+      {
+        "id": "ET3AB257EE74FA6874",
+        "name": "American Sign Language Interpreters",
+        "properties": {
+          "singular_name": "American Sign Language Interpreter",
+          "unique_postings": 6099
+        },
+        "score": 72.60983
+      },
+      {
+        "id": "ETD0C9CF89F72EF704",
+        "name": "Language Analysts",
+        "properties": {
+          "singular_name": "Language Analyst",
+          "unique_postings": 2159
+        },
+        "score": 72.00747
+      },
+      {
+        "id": "ET96E7035150A0D69D",
+        "name": "World Language Teachers",
+        "properties": {
+          "singular_name": "World Language Teacher",
+          "unique_postings": 3233
+        },
+        "score": 71.372536
+      },
+      {
+        "id": "ET7D55F2D2EEDC7FD8",
+        "name": "Foreign Language Assistants",
+        "properties": {
+          "singular_name": "Foreign Language Assistant",
+          "unique_postings": 2841
+        },
+        "score": 70.367836
+      },
+      {
+        "id": "ET789119F6D9DA9E11",
+        "name": "Language Specialists",
+        "properties": {
+          "singular_name": "Language Specialist",
+          "unique_postings": 1483
+        },
+        "score": 68.9271
+      },
+      {
+        "id": "ETB07B72D1910D8C8F",
+        "name": "English Language Learner Teachers",
+        "properties": {
+          "singular_name": "English Language Learner Teacher",
+          "unique_postings": 3671
+        },
+        "score": 68.85462
+      },
+      {
+        "id": "ET1448572CA66AF1E6",
+        "name": "K-12 Speech Language Pathologists",
+        "properties": {
+          "singular_name": "K-12 Speech Language Pathologist",
+          "unique_postings": 5668
+        },
+        "score": 68.816414
+      },
+      {
+        "id": "ETFCB3D6A95457EBB3",
+        "name": "Outpatient Speech Language Pathologists",
+        "properties": {
+          "singular_name": "Outpatient Speech Language Pathologist",
+          "unique_postings": 3576
+        },
+        "score": 68.66068
+      },
+      {
+        "id": "ET43D2CD242759B4A8",
+        "name": "Elementary School Speech Language Pathologists",
+        "properties": {
+          "singular_name": "Elementary School Speech Language Pathologist",
+          "unique_postings": 5373
+        },
+        "score": 68.43887
+      },
+      {
+        "id": "ET76C5DFD9550B8612",
+        "name": "School Sign Language Interpreters",
+        "properties": {
+          "singular_name": "School Sign Language Interpreter",
+          "unique_postings": 3340
+        },
+        "score": 68.15568
+      },
+      {
+        "id": "ET41749F9B96B86565",
+        "name": "Virtual School Speech Language Pathologists",
+        "properties": {
+          "singular_name": "Virtual School Speech Language Pathologist",
+          "unique_postings": 4882
+        },
+        "score": 67.76197
+      },
+      {
+        "id": "ET4E1F2C432A34376A",
+        "name": "Language Teachers",
+        "properties": {
+          "singular_name": "Language Teacher",
+          "unique_postings": 1274
+        },
+        "score": 67.68136
+      },
+      {
+        "id": "ET89E33364A1612C16",
+        "name": "English as a Foreign Language Teachers",
+        "properties": {
+          "singular_name": "English as a Foreign Language Teacher",
+          "unique_postings": 7267
+        },
+        "score": 67.58872
+      },
+      {
+        "id": "ET54D617075C18AAB0",
+        "name": "English Language Instructors",
+        "properties": {
+          "singular_name": "English Language Instructor",
+          "unique_postings": 1913
+        },
+        "score": 67.293915
+      },
+      {
+        "id": "ETD654441661ED1276",
+        "name": "Skilled Nursing Facility Speech Language Pathologists",
+        "properties": {
+          "singular_name": "Skilled Nursing Facility Speech Language Pathologist",
+          "unique_postings": 6839
+        },
+        "score": 67.17806
+      },
+      {
+        "id": "ET9D479A70B43705C6",
+        "name": "American Sign Language Teachers",
+        "properties": {
+          "singular_name": "American Sign Language Teacher",
+          "unique_postings": 2785
+        },
+        "score": 66.81156
+      },
+      {
+        "id": "ETAB2344C3D9F9BAD8",
+        "name": "Language Interpreters",
+        "properties": {
+          "singular_name": "Language Interpreter",
+          "unique_postings": 1130
+        },
+        "score": 66.6978
+      },
+      {
+        "id": "ET3EEB3619114E94B6",
+        "name": "Dual Language Teachers",
+        "properties": {
+          "singular_name": "Dual Language Teacher",
+          "unique_postings": 1753
+        },
+        "score": 66.615074
+      },
+      {
+        "id": "ETD02E9A98F2230D99",
+        "name": "Language Pathologists",
+        "properties": {
+          "singular_name": "Language Pathologist",
+          "unique_postings": 1014
+        },
+        "score": 65.809654
+      },
+      {
+        "id": "ETBCCF6349A07F3607",
+        "name": "English Language Specialists",
+        "properties": {
+          "singular_name": "English Language Specialist",
+          "unique_postings": 1576
+        },
+        "score": 65.78787
+      },
+      {
+        "id": "ET397BC4C80F220C14",
+        "name": "Speech Therapists/Speech Language Pathologists",
+        "properties": {
+          "singular_name": "Speech Therapist/Speech Language Pathologist",
+          "unique_postings": 3679
+        },
+        "score": 65.76367
+      },
+      {
+        "id": "ETBDD933CC7C373AC8",
+        "name": "Speech Language Specialists",
+        "properties": {
+          "singular_name": "Speech Language Specialist",
+          "unique_postings": 1562
+        },
+        "score": 65.71853
+      },
+      {
+        "id": "ETDCC174328C28E63E",
+        "name": "Speech Language Pathologist Clinical Fellows",
+        "properties": {
+          "singular_name": "Speech Language Pathologist Clinical Fellow",
+          "unique_postings": 3476
+        },
+        "score": 65.36278
+      },
+      {
+        "id": "ET1C3D33D5A94B9C6D",
+        "name": "Sign Language Instructors",
+        "properties": {
+          "singular_name": "Sign Language Instructor",
+          "unique_postings": 1472
+        },
+        "score": 65.25733
+      },
+      {
+        "id": "ET637864AB207EDDC0",
+        "name": "Early Intervention Speech Language Pathologists",
+        "properties": {
+          "singular_name": "Early Intervention Speech Language Pathologist",
+          "unique_postings": 3000
+        },
+        "score": 64.322624
+      },
+      {
+        "id": "ET6E35291C3760B7FC",
+        "name": "Chinese Language Teachers",
+        "properties": {
+          "singular_name": "Chinese Language Teacher",
           "unique_postings": 1289
         },
-        "score": 83.16078
+        "score": 64.225685
       },
       {
-        "id": "ET2337EBEDFF57E8E7",
-        "name": "Python Web Developers",
+        "id": "ET825F99D8A50B36DB",
+        "name": "Skilled Nursing Facility Travel Speech Language Pathologists",
         "properties": {
-          "singular_name": "Python Web Developer",
-          "unique_postings": 1041
+          "singular_name": "Skilled Nursing Facility Travel Speech Language Pathologist",
+          "unique_postings": 6551
         },
-        "score": 81.01086
+        "score": 64.224075
       },
       {
-        "id": "ETBE74833C4A43EA8F",
-        "name": "Full Stack Python Engineers",
+        "id": "ET83E72EA779AAB9DD",
+        "name": "Area Speech Language Pathologists",
         "properties": {
-          "singular_name": "Full Stack Python Engineer",
-          "unique_postings": 1387
+          "singular_name": "Area Speech Language Pathologist",
+          "unique_postings": 1912
         },
-        "score": 79.8348
+        "score": 64.02994
       },
       {
-        "id": "ET75A2E9D7F752C56E",
-        "name": "Python Back End Engineers",
+        "id": "ET32F2523E022BD5AE",
+        "name": "Educational Sign Language Interpreters",
         "properties": {
-          "singular_name": "Python Back End Engineer",
-          "unique_postings": 1093
+          "singular_name": "Educational Sign Language Interpreter",
+          "unique_postings": 1828
         },
-        "score": 77.55406
+        "score": 63.69768
       },
       {
-        "id": "ET3C03BF32A97D06E6",
-        "name": "Python Back End Developers",
+        "id": "ETC8F422DE998FEDA2",
+        "name": "English Language Assistants",
         "properties": {
-          "singular_name": "Python Back End Developer",
-          "unique_postings": 918
+          "singular_name": "English Language Assistant",
+          "unique_postings": 1170
         },
-        "score": 75.88372
+        "score": 63.473003
       },
       {
-        "id": "ET95D7D270710000B7",
-        "name": "Virtual Python Developers",
+        "id": "ET58A030F9B7D0F38C",
+        "name": "Inpatient Speech Language Pathologists",
         "properties": {
-          "singular_name": "Virtual Python Developer",
-          "unique_postings": 511
+          "singular_name": "Inpatient Speech Language Pathologist",
+          "unique_postings": 1732
         },
-        "score": 73.8542
+        "score": 63.298733
       },
       {
-        "id": "ET3F0E89D8346CA720",
-        "name": "Python/C++ Developers",
+        "id": "ETFAFAFE21CAD16D74",
+        "name": "Foreign Language Instructors",
         "properties": {
-          "singular_name": "Python/C++ Developer",
-          "unique_postings": 402
+          "singular_name": "Foreign Language Instructor",
+          "unique_postings": 1130
         },
-        "score": 71.44252
+        "score": 63.202705
       }
     ]
   }
 
-const exampleSkillsData = {
+export const exampleSkillsData = {
     "data": [
       {
-        "id": "KS123SS6NJ3ZPXGQJ54P",
-        "name": "Metal Fabrication",
+        "id": "KS125Q967QLS7TW8YSH7",
+        "name": "Language Acquisition",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 48.72259
+        "score": 32.247524
       },
       {
-        "id": "KS1222067ZTFYMP7VN16",
-        "name": "Metal Coating",
+        "id": "KS125Q96FM15CDRQDSM1",
+        "name": "Language Assessment",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 45.722862
+        "score": 32.09919
       },
       {
-        "id": "KS120YS6W1Q2H2D5F724",
-        "name": "Metal Bending",
+        "id": "KS125Q9686SGM72V009N",
+        "name": "Language Arts",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 42.150776
+        "score": 32.09919
       },
       {
-        "id": "KS127Z472N6PJY8Q6S0K",
-        "name": "Metal Powder",
+        "id": "ES9CF5E9F626DA925060",
+        "name": "Language Arts Endorsement",
         "properties": {
-          "skill_type": "Hard Skill"
+          "skill_type": "Certification"
         },
-        "score": 40.179016
+        "score": 31.09048
       },
       {
-        "id": "KS126F7766D4CGSBWHYK",
-        "name": "Sheet Metal",
+        "id": "KS125QB5ZFH3DNS84BMQ",
+        "name": "Language Education",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 38.237774
+        "score": 24.491573
       },
       {
-        "id": "KS125WP6R0MFD3WM4PC4",
-        "name": "Liquid Metal",
+        "id": "ESECCA8A3AF7A2D6FD47",
+        "name": "Language Disorders",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 38.22387
+        "score": 24.105032
       },
       {
-        "id": "KSMBI2GFSAMFM2G2HSJF",
-        "name": "Bare Metal",
+        "id": "KS125YW6KH5HYP9J06DY",
+        "name": "Engineered Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 38.22387
+        "score": 24.052097
       },
       {
-        "id": "KS126F879NS2CWLBWWCT",
-        "name": "Metal Surface Finishing",
+        "id": "KS125Q96WYTNFGJ3DCPT",
+        "name": "Language Codes",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 37.827602
+        "score": 24.03209
       },
       {
-        "id": "KS126F85Y0LLNGWJDNWX",
-        "name": "Metal Spinning",
+        "id": "KS125QB79Q7GMMCLN47B",
+        "name": "Language Lab",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 35.645515
+        "score": 24.03209
       },
       {
-        "id": "ES8DB298D51486FCDA79",
-        "name": "Transition Metal Oxides",
+        "id": "KS440J75WFDH40N0BCDQ",
+        "name": "Shading Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 35.277893
+        "score": 24.03209
       },
       {
-        "id": "KS1221M688PZX0PXS336",
-        "name": "Metal Lathes",
+        "id": "KS125QC6C8B0KV5XXJQ5",
+        "name": "Language Model",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 34.627567
+        "score": 24.03209
       },
       {
-        "id": "KS126F66PFL9RDPNQ92P",
-        "name": "Metal Injection Molding",
+        "id": "KS4416P5VRF54MR4F9LW",
+        "name": "Unary Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 34.38672
+        "score": 24.03209
       },
       {
-        "id": "KS126F66J8ZPCY58K8C2",
-        "name": "Metal Forming",
+        "id": "ESFCBFB0AB55453E7F6C",
+        "name": "Language Pragmatics",
         "properties": {
-          "skill_type": "Hard Skill"
+          "skill_type": "Soft Skill"
         },
-        "score": 34.15625
+        "score": 23.433632
       },
       {
-        "id": "KS124L872JT729Z39JY9",
-        "name": "Metal Detection Equipment",
+        "id": "KS122996RRJZCQF3XK7Y",
+        "name": "Language Interpretation",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 33.623184
+        "score": 23.429258
       },
       {
-        "id": "KS440JP744R3R4T2JJWC",
-        "name": "Shear (Sheet Metal)",
+        "id": "KS125P362QZMNFN8K242",
+        "name": "Language Localisation",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 33.616047
+        "score": 23.408272
       },
       {
-        "id": "KS123XP6379427GSWK50",
-        "name": "Filler Metal",
+        "id": "KS125NM66SXCYFHQBWNT",
+        "name": "Korean Language",
         "properties": {
-          "skill_type": "Hard Skill"
+          "skill_type": "Soft Skill"
         },
-        "score": 32.912365
+        "score": 23.408272
       },
       {
-        "id": "KS124NP651NGTJRQG5R6",
-        "name": "Metal Heat Treatments",
+        "id": "KS1242J775PRWB5FFKY7",
+        "name": "Formal Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 32.772697
+        "score": 23.408272
       },
       {
-        "id": "KS126F6670BVVC7XQ9TT",
-        "name": "Brake (Sheet Metal Bending)",
+        "id": "KS440SK6KYK8VBCV8P6Y",
+        "name": "Source Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 31.853676
+        "score": 22.863766
       },
       {
-        "id": "KS1246W71GGS10Q74JLD",
-        "name": "Gas Metal Arc Welding",
+        "id": "KS125Q96PZMF3FJ7RMR2",
+        "name": "Language Barrier",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 31.653906
+        "score": 22.863766
       },
       {
-        "id": "KS1264H69BR9S5ZMQC7Z",
-        "name": "Shielded Metal Arc Welding",
+        "id": "KS127LX6HSF17JKJQP74",
+        "name": "Pattern Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 31.446678
+        "score": 22.863766
       },
       {
-        "id": "KS1271C77RPP7V06BY8N",
-        "name": "Nickel Metal Hydride (NiMH Batteries)",
+        "id": "KS4420B6FBTX8JKHKQHJ",
+        "name": "Web Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 29.702494
+        "score": 22.863766
       },
       {
-        "id": "KS126816K6VY34KK48ZM",
-        "name": "Metal-Cored Arc Welding",
+        "id": "KS125NT5XRGFK5K6BMD0",
+        "name": "Krio Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 29.553621
+        "score": 22.863766
       },
       {
-        "id": "KS1232P6V2QW275H2TKH",
-        "name": "Direct Metal Laser Sintering",
+        "id": "KS125QB61WP2R6VXVZ96",
+        "name": "Language Development",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 29.553621
+        "score": 22.863766
       },
       {
-        "id": "KS126MT66HVPS5CL35YB",
-        "name": "Manual Metal Arc Welding",
+        "id": "ESA23F3FB543953FDF4D",
+        "name": "Brand Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 29.553621
+        "score": 22.863766
       },
       {
-        "id": "KS126F6766DZ1YZNFJWG",
-        "name": "Metalworking",
+        "id": "KS3C5EHXGP4RD1DF5ACT",
+        "name": "Language Implementation",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 28.6358
+        "score": 22.863766
       },
       {
-        "id": "KS126F76WZ6ZZ27TDKWB",
-        "name": "Scrap Metals",
+        "id": "ESF059F46A2D9A2C3F1F",
+        "name": "Hawaiian Language",
         "properties": {
-          "skill_type": "Hard Skill"
+          "skill_type": "Soft Skill"
         },
-        "score": 27.53323
+        "score": 22.863766
       },
       {
-        "id": "KS7G40J769R8LWTZ9550",
-        "name": "Metal Inert Gas (MIG) Welding",
+        "id": "KS126M774S7NPMM5HQT5",
+        "name": "Mixed Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 27.437576
+        "score": 22.863766
       },
       {
-        "id": "KS7G7RC798KKCM0G7QVL",
-        "name": "Metal Building Software",
+        "id": "KS127XJ6N5TJD85JDNPW",
+        "name": "Polish Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 27.221748
+        "score": 22.863766
       },
       {
-        "id": "KS1221D63GCHQJK5NQ6N",
-        "name": "Complementary Metal Oxide Semiconductor (CMOS)",
+        "id": "KS442215ZPFSH065H37N",
+        "name": "Whole Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 26.946066
+        "score": 22.863766
       },
       {
-        "id": "KS126PT5X0QK723XGX47",
-        "name": "Metal Oxide Semiconductor Implementation Service (MOSIS)",
+        "id": "KS441S65ZMJ8XPWSQ0MZ",
+        "name": "Vernacular Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 26.945389
+        "score": 22.863766
       },
       {
-        "id": "KS126F56W81876L5W9W4",
-        "name": "Metallic Bonding",
+        "id": "KS7G698788B2TVDZ5MD3",
+        "name": "Dari (Language)",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 26.562265
+        "score": 22.863766
       },
       {
-        "id": "KS126F877FXMTBJRD4B2",
-        "name": "Stamping (Metalworking)",
+        "id": "KS121JB78RY2N09166NC",
+        "name": "Cebuano Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 25.478428
+        "score": 22.851435
       },
       {
-        "id": "KS12610601Z38W5RB330",
-        "name": "Low Voltage Complementary Metal Oxide Semiconductor (LVCMOS)",
+        "id": "KS1214068GRCBP8WFT5P",
+        "name": "Body Language",
         "properties": {
-          "skill_type": "Hard Skill"
+          "skill_type": "Soft Skill"
         },
-        "score": 25.454632
+        "score": 22.851435
       },
       {
-        "id": "KS127Z46T1VD3JSKQWS4",
-        "name": "Powder Metallurgy",
+        "id": "ES8DA0C5FA686ACB4974",
+        "name": "Language Identification",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 24.791128
+        "score": 22.851435
       },
       {
-        "id": "KS7G6T466K2069L4BJW2",
-        "name": "Metallization",
+        "id": "KSAKBM4OPQS98JT0L7Z7",
+        "name": "Language Recognition",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 20.145588
+        "score": 22.851435
       },
       {
-        "id": "KS126FD6C2YST8M4M55F",
-        "name": "Metallic Paint",
+        "id": "KSJJY9VOM9XL0YKE46E0",
+        "name": "Language Design",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 18.953514
+        "score": 22.851435
       },
       {
-        "id": "KS685V86G7256MW5KPDF",
-        "name": "Punching (Metal Forming)",
+        "id": "KS1237F6G4SHL5KH12QB",
+        "name": "Dual Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 17.133583
+        "score": 22.851435
       },
       {
-        "id": "KS680ZZ5ZVS1C3MB8PBJ",
-        "name": "Brazing (Metal Work)",
+        "id": "KS1224M6BK4W800GSZSG",
+        "name": "Command Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 17.133583
+        "score": 22.851435
       },
       {
-        "id": "KS1217L5X475GTDMJM7C",
-        "name": "Polishing",
+        "id": "KS126PM6TY5CD028LN5R",
+        "name": "Montenegrin Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 15.9649725
+        "score": 22.851435
       },
       {
-        "id": "KS440NY6V5XVPBCVFPX0",
-        "name": "Metallic Path Facilities",
+        "id": "KSMB1NW4MCG1B77SB8MI",
+        "name": "Language Construct",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 15.903229
+        "score": 22.851435
       },
       {
-        "id": "KS126F6688TG2DBKKW39",
-        "name": "Parts Cleaning",
+        "id": "KS123XP626DDX0H7DNV1",
+        "name": "Filipino Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 14.5308075
+        "score": 22.845654
       },
       {
-        "id": "KS126F66QJLQ0Q09RLF1",
-        "name": "Stamping Press",
+        "id": "KS122PB6RZ6F349TWPYB",
+        "name": "Data-Structured Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 14.5308075
+        "score": 22.663216
       },
       {
-        "id": "KS123586FGV3X7F7BJR7",
-        "name": "Drawing",
+        "id": "KS4423777PS9FKJZJCXL",
+        "name": "Language Interface Pack",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 11.774382
+        "score": 22.663216
       },
       {
-        "id": "KS123V16TV0D8RYNHRZH",
-        "name": "Fatigue (Material)",
+        "id": "KS1225M6PXDC56RT7RS8",
+        "name": "Community Language Learning",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 11.078928
+        "score": 22.663216
       },
       {
-        "id": "KS126F96KQNK9XYCP5P7",
-        "name": "Metalcore",
+        "id": "KS440Y66GZCNWC0ZKG6Z",
+        "name": "Statistical Language Acquisition",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 10.480871
+        "score": 22.64217
       },
       {
-        "id": "KS126F976P71SWQ00SK1",
-        "name": "Metalib",
+        "id": "KS125QB77MSGPH63NTCP",
+        "name": "Language Experience Approach",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 10.480871
+        "score": 22.64217
       },
       {
-        "id": "KS126FF5VW6574KF9ZGM",
-        "name": "Metalogic",
+        "id": "ESFA3CF0C97099B3D8BE",
+        "name": "Receptive And Expressive Language",
         "properties": {
-          "skill_type": "Hard Skill"
+          "skill_type": "Soft Skill"
         },
-        "score": 10.480871
+        "score": 22.638731
       },
       {
-        "id": "KS1223C6460SL5CQ613K",
-        "name": "Rolling (Metalworking)",
+        "id": "KS1287P6CZLSR0R0SPBK",
+        "name": "Punjabi Language",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 10.092208
+        "score": 22.580557
       },
       {
-        "id": "KS123S75YB4SVST7D280",
-        "name": "Extractive Metallurgy",
+        "id": "KS124206N7YNCH0D379T",
+        "name": "Foreign Language",
         "properties": {
-          "skill_type": "Hard Skill"
+          "skill_type": "Soft Skill"
         },
-        "score": 10.092208
+        "score": 22.580557
       },
       {
-        "id": "KS1216L6SJTZJ5T4DJ6M",
-        "name": "Broaching (Metalworking)",
+        "id": "ESA3D4797A9EABA8FF51",
+        "name": "Sign Language Interpretation",
         "properties": {
           "skill_type": "Hard Skill"
         },
-        "score": 10.092208
+        "score": 22.448711
       }
     ]
   }
