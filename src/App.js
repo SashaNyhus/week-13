@@ -5,6 +5,8 @@ import { TitleButton } from "./modules/title-button";
 import {exampleTitlesData, exampleSkillsData} from "./modules/example-data"
 import { TitlesList } from "./modules/titles-list";
 import { SkillsList } from "./modules/skills-list";
+import { posterData } from "./modules/poster-data";
+import { ImperialAd} from "./modules/imperial-ad";
 
 function App() {
   console.log("App just rendered")
@@ -13,6 +15,7 @@ function App() {
   const [skills, setSkills] = useState(exampleSkillsData.data);
   const [chosenTitlesIncreasing, setChosenTitlesIncreasing] = useState();
   const [displayedSkills, setDisplayedSkills] = useState([]);
+  const [posterIndex, setPosterIndex] = useState(0);
   const [loading, setLoading] = useState(true);
 
   const getData = async () => {
@@ -50,17 +53,23 @@ function App() {
   }
 
   const addASkill = () => {
-    let newSkillsArray = [...skills];
-    let newDisplayedSkillsArray = [...displayedSkills];
-    let skillToAdd = newSkillsArray.pop();
-    newDisplayedSkillsArray.push(skillToAdd);
-    setSkills(newSkillsArray);
-    setDisplayedSkills(newDisplayedSkillsArray);
+    if(skills.length){
+      let newSkillsArray = [...skills];
+      let newDisplayedSkillsArray = [...displayedSkills];
+      let skillToAdd = newSkillsArray.pop();
+      newDisplayedSkillsArray.push(skillToAdd);
+      setSkills(newSkillsArray);
+      setDisplayedSkills(newDisplayedSkillsArray);
+    }
   }
 
   useEffect(() => {
     getData();
   }, []);
+
+  useEffect(() => {
+    setPosterIndex(i => (i + 1))
+  }, [chosenTitles])
 
 
   //Tried using useEffect for this, but it would always run with older versions of the displayed skills list and never increase the array length beyond 1
@@ -76,8 +85,12 @@ function App() {
         <div className="jobs-box">
           <TitlesList sectionClass="main-titles-list" sectionTitle="Job Postings" titles={titles} buttonFunction={addTitle} buttonText="Add Title" />
           <TitlesList sectionClass={`chosen-titles-list ${chosenTitlesIncreasing ? "green-text": "red-text"} `} sectionTitle="Wanting to Hire" titles={chosenTitles} buttonFunction={removeTitle} buttonText="Remove Title" />
-          {displayedSkills.length &&
-            <SkillsList skillsArray={displayedSkills} />
+          {displayedSkills.length ?
+            <SkillsList skillsArray={displayedSkills} /> :
+            <div className="skills-box"> 
+              {/* Couldn't get image source to work properly :/
+              <ImperialAd posterData={posterData} posterIndex={posterIndex}/> */}
+            </div>
             } 
         </div>
       }

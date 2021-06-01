@@ -22,6 +22,10 @@ button:hover {
   background-color: red;
 }
 
+li {
+  color: white;
+}
+
 .main-box {
   display: flex;
   align-items: center;
