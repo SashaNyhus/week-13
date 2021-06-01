@@ -8,6 +8,7 @@ import { SkillsList } from "./modules/skills-list";
 import { posterData } from "./modules/poster-data";
 import { ImperialAd} from "./modules/imperial-ad";
 
+
 function App() {
   console.log("App just rendered")
   const [titles, setTitles] = useState(exampleTitlesData.data);
@@ -68,7 +69,14 @@ function App() {
   }, []);
 
   useEffect(() => {
-    setPosterIndex(i => (i + 1))
+    setPosterIndex(i => {
+      console.log(i)
+      i = i + 1;
+      if (i > 3){
+        i = 0;
+      }
+      return i;
+    })
   }, [chosenTitles])
 
 
@@ -86,10 +94,9 @@ function App() {
           <TitlesList sectionClass="main-titles-list" sectionTitle="Job Postings" titles={titles} buttonFunction={addTitle} buttonText="Add Title" />
           <TitlesList sectionClass={`chosen-titles-list ${chosenTitlesIncreasing ? "green-text": "red-text"} `} sectionTitle="Wanting to Hire" titles={chosenTitles} buttonFunction={removeTitle} buttonText="Remove Title" />
           {displayedSkills.length ?
-            <SkillsList skillsArray={displayedSkills} /> :
+            <SkillsList skillsArray={displayedSkills} posterData={posterData} posterIndex={posterIndex} /> :
             <div className="skills-box"> 
-              {/* Couldn't get image source to work properly :/
-              <ImperialAd posterData={posterData} posterIndex={posterIndex}/> */}
+              <ImperialAd posterData={posterData} posterIndex={posterIndex}/>
             </div>
             } 
         </div>
