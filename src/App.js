@@ -4,15 +4,25 @@ import { fetchingFunction } from "./modules/fetching-function";
 import { TitleButton } from "./modules/title-button";
 import {exampleTitlesData, exampleSkillsData} from "./modules/example-data"
 import { TitlesList } from "./modules/titles-list";
+import { SkillsList } from "./modules/skills-list";
 
 function App() {
-  console.log("I just rendered")
+  console.log("App just rendered")
   const [titles, setTitles] = useState(exampleTitlesData.data);
   const [chosenTitles, setChosenTitles] = useState([]);
   const [skills, setSkills] = useState(exampleSkillsData.data);
-  const [chosenTitlesIncreasing, setChosenTitlesIncreasing] = useState(true);
+  const [chosenTitlesIncreasing, setChosenTitlesIncreasing] = useState();
   const [displayedSkills, setDisplayedSkills] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const getData = async () => {
+    setLoading(true);
+    const fetchedTitles = await fetchingFunction("title", "language", 100);
+    const fetchedSkills = await fetchingFunction("skills", "language", 100);
+    setTitles(fetchedTitles.data);
+    setSkills(fetchedSkills.data);
+    setLoading(false);
+  }
 
   const addTitle = (indexOfTitleToAdd) => {
     let newTitles = [...titles];
@@ -24,6 +34,7 @@ function App() {
     setTitles(newTitles);
     setChosenTitles(newChosenTitles);
     setChosenTitlesIncreasing(true);
+    addASkill();
   }
 
   const removeTitle = (indexOfTitleToRemove) => {
@@ -40,33 +51,36 @@ function App() {
 
   const addASkill = () => {
     let newSkillsArray = [...skills];
-    let newDisplayedSkillsArray = [displayedSkills];
+    let newDisplayedSkillsArray = [...displayedSkills];
     let skillToAdd = newSkillsArray.pop();
     newDisplayedSkillsArray.push(skillToAdd);
     setSkills(newSkillsArray);
     setDisplayedSkills(newDisplayedSkillsArray);
   }
 
-  useEffect(async () => {
-    const fetchedTitles = await fetchingFunction("title", "language", 100);
-    const fetchedSkills = await fetchingFunction("skills", "language", 100);
-    setTitles(fetchedTitles.data);
-    setSkills(fetchedSkills.data);
-    setLoading(false);
-  }, [fetchingFunction]);
-
   useEffect(() => {
-    if(chosenTitlesIncreasing){
-      addASkill();
-    }
-  }, [chosenTitlesIncreasing])
+    getData();
+  }, []);
 
+
+  //Tried using useEffect for this, but it would always run with older versions of the displayed skills list and never increase the array length beyond 1
+  // useEffect(() => {
+  //   if(chosenTitlesIncreasing){
+  //     addASkill();
+  //   }
+  // }, [chosenTitlesIncreasing])
   return (
     <div className="main-box">
-      <TitlesList sectionClass="main-titles-list" sectionTitle="Job Postings" titles={titles} buttonFunction={addTitle} buttonText="Add Title" />
-      
-      <TitlesList sectionClass={`chosen-titles-list ${chosenTitlesIncreasing ? "green-text": "red-text"} `} sectionTitle="Wanting to Hire" titles={chosenTitles} buttonFunction={removeTitle} buttonText="Remove Title" />
-      
+      {loading ? 
+        <h1 className="loading-text">Loading Job Data</h1> :
+        <div className="jobs-box">
+          <TitlesList sectionClass="main-titles-list" sectionTitle="Job Postings" titles={titles} buttonFunction={addTitle} buttonText="Add Title" />
+          <TitlesList sectionClass={`chosen-titles-list ${chosenTitlesIncreasing ? "green-text": "red-text"} `} sectionTitle="Wanting to Hire" titles={chosenTitles} buttonFunction={removeTitle} buttonText="Remove Title" />
+          {displayedSkills.length &&
+            <SkillsList skillsArray={displayedSkills} />
+            } 
+        </div>
+      }
     </div>
   );
 }

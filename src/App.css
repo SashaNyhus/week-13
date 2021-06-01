@@ -1,10 +1,60 @@
+h1 {
+  font-size: 24px;
+  color: white;
+}
+
+h2 {
+  font-size: 14px;
+  color: white;
+}
+
+button {
+  height: 20px;
+  min-width: 100px;
+  color: black;
+  background-color: white;
+  border: none;
+  margin-right: 5px;
+}
+
+button:hover {
+  color: white;
+  background-color: red;
+}
+
 .main-box {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  background-image: url('images/starry-background.webp');
+  height: 100vh;
+  margin: 0;
+  padding: 50px;
+}
+
+.loading-text {
+  color: white;
+  font-size: 48px;
+  text-align: center;
+}
+
+.jobs-box {
+  display: flex;
+  justify-content: space-around;
+  max-height: 100%;
 }
 
 .titles-box {
-  /* width: 50%; */
+  width: 30%;
+  padding: 10px;
+  overflow: auto;
+  border: 3px solid white;
+}
+
+.skills-box {
+  width: 30%;
+  padding: 10px;
+  border: 3px solid white;
 }
 
 .green-text .section-header {
@@ -13,4 +63,11 @@
 
 .red-text .section-header {
   color: red;
+}
+
+.title-button-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 58px;
 }
