@@ -39,7 +39,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('images/starry-background.webp');
+  background-image: url('starry-background.webp');
   height: 100vh;
   margin: 0;
   padding: 50px;
