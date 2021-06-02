@@ -1,6 +1,6 @@
 export const posterData = {
     "source": {
-        "artistName": "Russel Walker",
+        "artistName": "Russel Walks",
         "artistSiteURL": "https://russellwalks.tumblr.com" 
     },
     "images": [
